@@ -1,0 +1,17 @@
+body {
+ background-image: url("../img/backproce.jpg");
+}
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#x{
+	float: right;
+}
+h1 {
+	text-align: center;
+	color:white;
+}

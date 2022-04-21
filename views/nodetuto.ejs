@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="utf-8">
+<title>Les Proceduriers</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../public/style/style3.css"/>
+</head>
+<body>
+  <%-include ('./partials/testnav') %>
+  <img id="xx" src="../public/img/portal.jpg">
+   <img  id="xx" src="../public/img/node.png">
+    
+    <h2 id="xx"> Comment préparer un projet Node/Express/EJS et l'heberger sur un serveur Linux ?</h2></br>
+    
+    <p>&#160;&#160;&#160;Mesdames et messieurs, avant de commencer, il faut avoir installer ses outils dans votre ordinateur. </br> </br>&#160;&#160; - Visual Studio Code(Editeur de code extensible développé par Microsoft pour Windows, Linux et macOS.</br> &#160;&#160;Les fonctionnalités incluent la prise en charge du débogage, la mise en évidence de la syntaxe,</br>&#160;&#160; la complétion intelligente du code, les snippets, la refactorisation du code et Git intégré.)</br> </br> &#160;&#160;- PUTTY (Emulateur de terminal doublé d'un client pour les protocoles SSH, Telnet, rlogin, et TCP brut.</br> &#160;&#160;Il permet également des connexions directes par liaison série RS-232.)</br>
+    </br> &#160;&#160;- WinSCP(un client SFTP graphique pour Windows. Il utilise SSH et est open source. Le protocole SCP est également supporté.</br>&#160;&#160; Le but de ce programme est de permettre la copie sécurisée de fichiers entre un ordinateur local et un ordinateur distant. )
+    </p>
+    
+    <ul>
+        <li>Logiciel d’édition Visual Studio Code  &#160; <a href="https://code.visualstudio.com/download" class="btn btn-info" role="button">Download</a> </li>
+          <li>Putty &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <a href="https://www.putty.org/" class="btn btn-info" role="button">Download</a> </li>
+          <li>WinSCP &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <a href="https://winscp.net/eng/download.php" class="btn btn-info" role="button">Download</a> </li>
+    </ul>    
+    
+    <ol>
+    
+        <li>Création du dossier dans un répertoire à votre choix.</li></br>
+         <li>Ouvrez le Command Prompt du Windows dans la barre recherche.
+</li>
+<img src="../public/img/proc1.png"><hr/>
+</br>
+         <li>Déplacer vous dans votre dossier à l’aide du commande ‘CD’ + votre chemin répertoire </li>
+<img src="../public/img/proc2.png"></br><hr/>
+         <li>Taper la commande ‘npm init’ pour initialiser le project </br>
+Vous pouvez just taper 'enter' jusqu'au l'arriver à votre 'entry point' , la vous choisissez un nom que vous voulez (ICI on l'appelerai 'monApp.js') puis continuer avec 'enter'. 
+<img src="../public/img/proc3.png"></br><hr/>
+
+Vérifier que votre fichier Package Json ressemble à ça afin de continuer vers la prochaine étape. </br>
+<img src="../public/img/proc4.png"></br></li><hr/>
+
+<li>Installer Express maintenant à l'aide du commande 'npm install express-save-g'</br>
+<img src="../public/img/proc5.png"></br><hr/>
+<div id="containerIntro">
+    <h4>Express </h4>
+    <p>est un framework pour construire des applications web basées sur Node.js. C'est de fait le framework standard pour le développement de serveur en Node.js.</p>
+</div></li>
+</br>
+
+<li>On va également installer EJS à l'aide du commande 'npm install ejs'</br>
+
+<div id="containerIntro">
+    <h4>EJS</h4>
+    <p>est un langage de création de modèles simple qui vous permet de générer un balisage HTML avec du JavaScript brut.</p>
+</div>
+
+Vous allez remarquer l'ajout de ces dernier dans votre fichier Package.json</li>
+<img src="../public/img/proc7.png"></br><hr/>
+
+<hr/>
+
+<li>  Creation du fichier 'monApp.js' qui va contenir notre code node  </li>
+<li>  Ajouter ces deux lignes de code par la suite. </br>
+
+</li>
+<img src="../public/img/proc8.png"></br><hr/>
+
+<li>Configurons votre port comme ceci</li>
+<img src="../public/img/proc10.png"></li><hr/>
+
+<li> Ensuite ajouter ces lignes   </br>
+<img src="../public/img/proc9.png"></li><hr/>
+
+<li> Créons notre dossier 'VIEWS' ansi que le dossier 'PUBLIC' </li>
+<img src="../public/img/proc11.png"></li><hr/>
+
+
+<li>Créons notre page 'Index.ejs' à l'interieur du dossier 'Views'</br>
+Vous pouvez mettre du code html dans votre index, on va par exemple écrire (Procedurier Exemple)
+</li>
+<img src="../public/img/proc13.png"></br><hr/>
+
+<li>Définir la route de la page Index.ejs</li></br>
+<img src="../public/img/proc14.png"></br><hr/>
+<li>Maintenant...Si on lance le serveur sur le port avec cette commande</li></br>
+<img src="../public/img/proc15.png"></br></br><hr/>
+<li>Ça nous donne la page !</li></br>
+<img src="../public/img/proc12.png"></br><hr/>
+<strong> &#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;Après soyez creative 😉 mettez plusieurs pages web avec du Css, boostrap, Javascript...faite votre freestyle et amusez-vous (La balle est dans votre camp)</strong>
+<hr/></ol>
+</br></br>
+
+
+<img id="xx" src="../public/img/cloud.gif"></br>
+<h5>&#160;&#160;&#160;Passant maintenant a l'hébergement</h5>
+<h5>&#160;&#160;&#160;Sorter les outils <big>Winscp</big> et <big>Putty</big> qu'on à télécharger au préalable</h5>
+<ol>
+<li>Premierement, il faut d'abord avoir un compte d'utilisateur ainsi qu'un mot de passe sur un serveur linux, generalement c'est fournis par votre admistrateur réseau. </li><br/>
+<li>Rentrer votre hostname ainsi que votre compte/mot de passe linux et clicker sur Login.</li>
+<img src="../public/img/hebe1.png"></br><hr/>
+<li>Copier votre projet node dans votre répertoire linux.</li>
+<img src="../public/img/hebe6.png"></br><hr/>
+<li>Ouvrer Putty et renter votre hostname, puis clicker sur Open.</li>
+<img src="../public/img/hebe2.png"></br><hr/>
+<li>Enter votre compte linux ainsi que votre mot de passe.</li>
+<img src="../public/img/hebe3.png"></br><hr/>
+<li>Déplacer vous dans le dossier que vous venez de copier et puis lancer le serveur avec la meme commande (node monapp.js).</li>
+<img src="../public/img/hebe4.png"></br><hr/>
+<li>☁️ Voila ! Votre site est hébérger.</li>
+<img src="../public/img/hebe5.png"></br><hr/>
+
+</ol>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	 
+
+</body>
+</html>
